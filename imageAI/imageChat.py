@@ -16,7 +16,7 @@ client = OpenAI(api_key='sk-12lth8N6I40ye2cvAd07Cb44Ff84445b918eCa93829eAf7a', b
 function_choice = st.radio("选择功能", ("上传照片", "自拍"))
 
 if function_choice == "上传照片":
-    uploaded_image = st.file_uploader("上传一张图片", type=["jpg", "jpeg", "png"])
+    uploaded_image = st.file_uploader("上传一张图片，系统不会保存任何图像信息", type=["jpg", "jpeg", "png"])
     if uploaded_image is not None:
         image = Image.open(uploaded_image)
 else:
