@@ -44,7 +44,7 @@ if 'image' in locals():
                 prompt = "请给出适合该人面部特征的化妆建议,包括妆容风格、彩妆色系等。"
             elif further_choice == "发型建议":
                 prompt = "请根据该人的脸型、五官特点,推荐适合ta的发型。"
-            elif further_choice == "小红书文案":
+            elif further_choice == "小红书文案写作":
                 prompt = "请以该照片为素材,创作一段有趣、有吸引力的小红书文案。文案内容加上各种有趣的小图标"
             else:
                 
