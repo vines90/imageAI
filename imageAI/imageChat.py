@@ -10,7 +10,7 @@ st.set_page_config(page_title="📷 魔镜", page_icon=":camera:")
 st.title("📷 魔镜")
 
 # OpenAI API配置
-client = OpenAI(api_key='sk-12lth8N6I40ye2cvAd07Cb44Ff84445b918eCa93829eAf7a', base_url="https://ai-yyds.com/v1")
+client = OpenAI(api_key='sk-A8OtaJuOkyNBnSz50dEeC9219b934b50Bf76D7CbF0Da1760', base_url="https://ai-yyds.com/v1")
 
 # 用户选择功能
 function_choice = st.radio("选择功能", ("上传照片", "自拍"))
@@ -99,10 +99,10 @@ if 'image' in locals():
             st.markdown("### 照片理解:")
             st.write(content)
 
-            response = client.audio.speech.create(
-                model="tts-1-hd",
-                voice="onyx",
-                input=content,
-            )
-            response.stream_to_file("output.mp3")
-            st.audio("output.mp3", start_time=0)
+#            response = client.audio.speech.create(
+#                model="tts-1-hd",
+#                voice="onyx",
+#                input=content,
+#            )
+#            response.stream_to_file("output.mp3")
+#            st.audio("output.mp3", start_time=0)
