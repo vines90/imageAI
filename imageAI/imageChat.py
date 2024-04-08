@@ -96,10 +96,10 @@ if 'image' in locals():
             st.markdown("### 照片理解:")
             st.write(content)
 
-            response = client.audio.speech.create(
-                model="tts-1-hd",
-                voice="onyx",
-                input=content,
-            )
-            response.stream_to_file("output.mp3")
-            st.audio("output.mp3", start_time=0)
+ #           response = client.audio.speech.create(
+ #               model="tts-1-hd",
+ #               voice="onyx",
+ #               input=content,
+ #           )
+ #           response.stream_to_file("output.mp3")
+ #           st.audio("output.mp3", start_time=0)
