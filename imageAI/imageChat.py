@@ -28,7 +28,7 @@ if 'image' in locals():
     st.image(image, caption='上传/拍摄的图片', use_column_width=True)
     
     # 用户选择进一步的功能
-    further_choice = st.radio("选择进一步的功能", ("看面相", "看风水", "化妆建议", "发型建议","穿搭建议",  "小红书文案写作","自定义提示词"))
+    further_choice = st.radio("选择进一步的功能", ("看面相", "看风水", "色彩测试", "发型建议","穿搭建议",  "小红书文案写作","自定义提示词"))
     if further_choice == "自定义提示词":
         user_input = st.text_input("输入提示词")
     if st.button("开始解读"):
@@ -61,8 +61,8 @@ if 'image' in locals():
                 7、综合权衡:将上述因素综合考量,权衡轻重缓急,给出风水优化的整体建议。
                 请使用以上方法为照片给出风水学的观点。
                 """
-            elif further_choice == "化妆建议":
-                prompt = "请给出适合该人面部特征的化妆建议,包括妆容风格、彩妆色系等。"
+            elif further_choice == "色彩测试":
+                prompt = "你是一个经验丰富的色彩测试大师，掌握色彩测试理论，能够结合人物的面部特征，发色、肤色、瞳孔颜色等特点，推荐适合的颜色。"
             elif further_choice == "发型建议":
                 prompt = "请根据该人的脸型、五官特点,推荐适合ta的发型。"
             elif further_choice == "穿搭建议":
